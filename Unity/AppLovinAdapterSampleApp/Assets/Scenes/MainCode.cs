@@ -19,11 +19,9 @@ public class MainCode : MonoBehaviour,IScreenLogger
 #if UNITY_ANDROID
 	private const string InterstitialAdUnitId = "4bc7e2ec5cb830a6";
 	private const string RewardedAdUnitId = "8f22d6151d47cc2f";
-	private const string BannerAdUnitId = "bef86daad87d70de";
 #elif UNITY_IOS
-	private const string InterstitialAdUnitId = "226193ede58bbbd4"; 
-	private const string RewardedAdUnitId = "c4dfffd41c1ae85f";
-	private const string BannerAdUnitId = "d7de95033caa41e6";
+	private const string InterstitialAdUnitId = "ed39810afdabdca3"; 
+	private const string RewardedAdUnitId = "a36ea0cb9c9fb265";
 #else
 	private const string InterstitialAdUnitId = "";
 	private const string RewardedAdUnitId = "";
@@ -43,8 +41,6 @@ public class MainCode : MonoBehaviour,IScreenLogger
 
 			InitializeInterstitialAds();
             InitializeRewardedAds();
-            InitializeBannerAds();
-			//MaxSdk.ShowMediationDebugger();
 		};
 
 		MaxSdk.SetVerboseLogging(true);
@@ -52,63 +48,6 @@ public class MainCode : MonoBehaviour,IScreenLogger
 		MaxSdk.InitializeSdk();
 	}
 
-	#region Banner Ad Methods
-
-	private void InitializeBannerAds()
-	{
-		// Attach Callbacks
-		MaxSdkCallbacks.Banner.OnAdLoadedEvent += OnBannerAdLoadedEvent;
-		MaxSdkCallbacks.Banner.OnAdLoadFailedEvent += OnBannerAdFailedEvent;
-		MaxSdkCallbacks.Banner.OnAdClickedEvent += OnBannerAdClickedEvent;
-		MaxSdkCallbacks.Banner.OnAdRevenuePaidEvent += OnBannerAdRevenuePaidEvent;
-
-		
-	}
-
-	public void loadBanner()
-    {
-		AddEvent("Load Banner");
-		// Banners are automatically sized to 320x50 on phones and 728x90 on tablets.
-		// You may use the utility method `MaxSdkUtils.isTablet()` to help with view sizing adjustments.
-		//MaxSdk.ShowMediationDebugger();
-		MaxSdk.CreateBanner(BannerAdUnitId, MaxSdkBase.BannerPosition.BottomCenter);
-
-		// Set background or background color for banners to be fully functional.
-		MaxSdk.SetBannerBackgroundColor(BannerAdUnitId, new Color(1, 1, 1, 0));
-	}
-
-	public void hideBanner()
-	{
-		AddEvent("Hide Banner");
-		MaxSdk.DestroyBanner(BannerAdUnitId);
-	}
-
-	private void OnBannerAdLoadedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
-	{
-		// Banner ad is ready to be shown.
-		// If you have already called MaxSdk.ShowBanner(BannerAdUnitId) it will automatically be shown on the next ad refresh.
-		AddEvent("Banner ad loaded");
-		MaxSdk.ShowBanner(BannerAdUnitId);
-	}
-
-	private void OnBannerAdFailedEvent(string adUnitId, MaxSdkBase.ErrorInfo errorInfo)
-	{
-		// Banner ad failed to load. MAX will automatically try loading a new ad internally.
-		AddEvent("Banner ad failed to load with error code: " + errorInfo.Code);
-	}
-
-	private void OnBannerAdClickedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
-	{
-		AddEvent("Banner ad clicked");
-	}
-
-	private void OnBannerAdRevenuePaidEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
-	{
-		// Banner ad revenue paid. Use this callback to track user revenue.
-		AddEvent("Banner ad revenue paid " + adInfo.NetworkName);
-	}
-
-	#endregion
 
 	#region Interstitial Ad Methods
 
