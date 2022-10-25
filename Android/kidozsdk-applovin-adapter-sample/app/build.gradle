@@ -1,0 +1,61 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.kidoz.android.applovin.sampleapp"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+
+    signingConfigs {
+        release {
+            storeFile file("kidozkeystore")
+            storePassword "numberoneapp"
+            keyAlias "keystore"
+            keyPassword "numberoneapp"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled false
+            debuggable true
+            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "version"
+    productFlavors {
+        androidNative {
+            dimension "version"
+        }
+        local_env {
+            dimension "version"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'org.greenrobot:eventbus:3.2.0'
+    implementation 'net.kidoz.sdk:kidoz-android-native:8.9.8'
+    implementation 'net.kidoz.sdk:kidoz-android-applovin-adapter:1.0.0'
+    implementation "com.applovin:applovin-sdk:11.4.4"
+}

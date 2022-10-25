@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Applovin Adapter Sample App</string>
+    <string name="kidoz_testapp_action_main">kidoz.testapp.intent.action.MAIN</string>
+</resources>
