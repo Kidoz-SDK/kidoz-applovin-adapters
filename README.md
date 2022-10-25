@@ -18,5 +18,5 @@ In the custom network you should enter the following data:
 Custom Network Name: Kidoz <BR>
 iOS Adapter Class Name: KidozMediationAdapter<BR>
 Android / Fire OS Adapter Class Name: com.applovin.mediation.adapters.KidozMediationAdapter<BR>
-
+<BR>
 <img width="800" alt="AppLovinCustomNetwork" src="https://user-images.githubusercontent.com/86282008/197710543-171fe5fc-9c5e-414b-96ab-07f3b28de708.png">
