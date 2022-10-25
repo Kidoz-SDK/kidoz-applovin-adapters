@@ -8,7 +8,7 @@ The Adapter currently offers support for the following ad types:
 on the following platforms:
 
 + [Unity](https://github.com/Kidoz-SDK/applovin-adapter-sample-apps/tree/main/Unity)
-+ [Native Android](https://github.com/Kidoz-SDK/applovin-adapter-sample-apps/tree/main/Unity)
++ [Native Android]([https://github.com/Kidoz-SDK/applovin-adapter-sample-apps/tree/main/Unity](https://github.com/Kidoz-SDK/applovin-adapter-sample-apps/tree/main/Android))
 + [Native iOS](https://github.com/Kidoz-SDK/applovin-adapter-sample-apps/tree/main/Unity)
 
 Prerequisites
