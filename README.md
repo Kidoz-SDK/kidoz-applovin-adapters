@@ -23,9 +23,12 @@ Android / Fire OS Adapter Class Name: com.applovin.mediation.adapters.KidozMedia
   
   
 After the Kidoz Network was properly configured you will now be able to enable and configure the Kidoz Ad Data in your Ad Unit waterfall.
-You should replace KIDOZ_PUBLISHER_ID and KIDOZ_SECURITY_TOKEN with the publisher id and token you recived from Kidoz when you've created your publisher account and set the json string inside the Custom Parameters field of the Kidoz ad configuration
+Replace KIDOZ_PUBLISHER_ID and KIDOZ_SECURITY_TOKEN with the publisher id and token you recived from Kidoz when you've created your publisher account.
 ```java
   {"publisher_id":"KIDOZ_PUBLISHER_ID","token":"KIDOZ_SECURITY_TOKEN"}
 ```
+Place the json string in the Custom Parameters field and save.
   
   
+  <img width="800" alt="AppLovin AdUnit Config" src="https://user-images.githubusercontent.com/86282008/197715891-2a6501d4-741e-4322-9343-fcbfe49db1a2.png">
+
