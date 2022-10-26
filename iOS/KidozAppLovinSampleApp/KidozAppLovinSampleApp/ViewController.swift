@@ -30,30 +30,20 @@ class ViewController: UIViewController,MAAdViewAdDelegate,MARewardedAdDelegate,M
     @IBOutlet weak var logText: UITextView!
     @IBOutlet weak var appLabel: UILabel!
     
-    private static var INTERSTITIAL_AD_ID = "34a51b80059c32e2"
-    private static var REWARDED_AD_ID = "625f0d5c264709c6"
-    private static var BANNER_AD_ID = "5b8f1a3f89a5bee4"
+    private static var INTERSTITIAL_AD_ID = "94c3a42faf40cd5b"
+    private static var REWARDED_AD_ID = "a4de0cc81e54a4c8"
     
     private let interstitialAd = MAInterstitialAd(adUnitIdentifier:INTERSTITIAL_AD_ID )
     private let rewardedAd = MARewardedAd.shared(withAdUnitIdentifier:REWARDED_AD_ID )
-    private var adView: MAAdView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setBorder()
-        appLabel.text = "AppLovin Adapter Test App"
+        appLabel.text = "AppLovin Adapter Sample App"
 
-        
-#if !MULTI_ENV // Clear waterfall url in test app
-        UserDefaults.standard.set(nil, forKey: ViewController.WATERFALL_URL_KEY)
-#endif
-//        logOut(message: "SDK Version \(getSDKVersion())")
         logOut(message: "SDK Initialized")
-          // Do any additional setup after loading the view.
-        
         interstitialAd.delegate = self
         rewardedAd.delegate = self
-        initBannerView()
     }
     
 
@@ -73,7 +63,7 @@ class ViewController: UIViewController,MAAdViewAdDelegate,MARewardedAdDelegate,M
 //    func getSDKVersion() -> String{
 //        let sdkVersion: String = KidozAppLovinSDKInfo.getSdkVersion(),build = Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as! String
 //        return "\(sdkVersion)(\(build))"
-//    }  
+//    }
 
 
     
@@ -111,43 +101,6 @@ class ViewController: UIViewController,MAAdViewAdDelegate,MARewardedAdDelegate,M
     }
     
     
-    
-    // MARK: - Banner
-    
-    @IBAction func loadBanner(_ sender: Any) {
-        logOut(message: "Load Banner")
-        adView?.loadAd()
-    }
-
-    @IBAction func hideBanner(_ sender: Any) {
-        logOut(message: "Hide Banner")
-        adView?.removeFromSuperview()
-        initBannerView()
-    }
-    
-    func initBannerView(){
-        adView = MAAdView(adUnitIdentifier: ViewController.BANNER_AD_ID)
-        adView!.delegate = self
-        
-        adView!.translatesAutoresizingMaskIntoConstraints = false
-
-        
-        // Calculate dimensions
-//        let width = view.bounds.width // Stretch to the width of the screen for banners to be fully functional
-//        let height: CGFloat = 50 //
-//        let x: CGFloat = 0
-//        let y: CGFloat = view.bounds.height - 54
-//
-//        adView!.frame = CGRect(x: x, y: y, width: width, height: height)
-
-        
-        view.addSubview(adView!)
-        adView!.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true;
-        adView!.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true;
-        adView!.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant: -2).isActive = true;
-        adView!.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        adView!.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true;
-    }
     
     
     
