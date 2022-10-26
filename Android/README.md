@@ -1,5 +1,7 @@
 # Native Android Adapter
 
+### Integration Steps:
+
 Include the following inside your app build.gradle dependencies:
 
 ```java
