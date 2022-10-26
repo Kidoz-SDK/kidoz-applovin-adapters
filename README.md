@@ -17,7 +17,7 @@ Prerequisites
 Before publishing your first app please finish the onboarding process for Kidoz's publishers [HERE](http://accounts.kidoz.net/publishers/register?utm_source=&utm_content=&utm_campaign=&utm_medium=)  
 and follow the instructions in the AppLovin Custom SDK Network Integration Guide [HERE](https://dash.applovin.com/documentation/mediation/android/mediation-setup/custom-sdk)
 
-In the custom network you should enter the following data:
+In the Manage Network form you should enter the following data:
 
 Custom Network Name: Kidoz <BR>
 iOS Adapter Class Name: KidozMediationAdapter<BR>
