@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="KidozAppLovinSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="gvT-hX-KB7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="X8K-8A-r41">
+                                <rect key="frame" x="40" y="276" width="335" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="nWn-Aa-NbN"/>
+                                </constraints>
+                                <color key="textColor" red="0.99775952830000003" green="1" blue="0.99592033010000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="805-ZT-KNh">
+                                <rect key="frame" x="40" y="131" width="158" height="30"/>
+                                <color key="backgroundColor" red="0.99775952830000003" green="1" blue="0.99592033010000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0Wu-S3-h0I"/>
+                                    <constraint firstAttribute="width" constant="158" id="jgs-Mz-jew"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <state key="normal" title="Load Interstitial"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loadInterstitial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1U1-Yv-an6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxe-Tw-I1S">
+                                <rect key="frame" x="217" y="132" width="158" height="30"/>
+                                <color key="backgroundColor" red="0.99775952830000003" green="1" blue="0.99592033010000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="M7o-MH-fiV"/>
+                                    <constraint firstAttribute="height" constant="30" id="vkz-wO-gD9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <state key="normal" title="Show Interstitial"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showInterstitial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lzi-sy-4tr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ZH-bG-wmR">
+                                <rect key="frame" x="40" y="171" width="158" height="30"/>
+                                <color key="backgroundColor" red="0.99775952830000003" green="1" blue="0.99592033010000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="14I-EF-g3u"/>
+                                    <constraint firstAttribute="height" constant="30" id="zQc-Q3-sPH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <state key="normal" title="Load Rewarded"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loadRewarded:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uvd-8R-WLe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRp-OS-zsL">
+                                <rect key="frame" x="217" y="171" width="158" height="30"/>
+                                <color key="backgroundColor" red="0.99775952830000003" green="1" blue="0.99592033010000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="mu1-Wj-fHN"/>
+                                    <constraint firstAttribute="height" constant="30" id="wzn-kG-2JC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <state key="normal" title="Show Rewarded"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showRewarded:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zli-m9-nnq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Kidoz AppLovin Sample App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PV4-e5-WVf">
+                                <rect key="frame" x="118" y="59" width="178" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="dEt-3o-VNj" userLabel="height = 40"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wi4-bT-7Iw"/>
+                        <color key="backgroundColor" red="0.60945638020000004" green="1" blue="0.076090494790000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="X8K-8A-r41" firstAttribute="leading" secondItem="wi4-bT-7Iw" secondAttribute="leading" constant="20" id="0Ry-qG-AxV"/>
+                            <constraint firstItem="X8K-8A-r41" firstAttribute="centerX" secondItem="wi4-bT-7Iw" secondAttribute="centerX" id="3pY-Iy-1Uv"/>
+                            <constraint firstItem="Mxe-Tw-I1S" firstAttribute="leading" secondItem="wi4-bT-7Iw" secondAttribute="centerX" constant="10" id="9ZQ-Oi-iUT"/>
+                            <constraint firstItem="805-ZT-KNh" firstAttribute="trailing" secondItem="wi4-bT-7Iw" secondAttribute="centerX" constant="-10" id="EIZ-Ef-mJl"/>
+                            <constraint firstItem="X8K-8A-r41" firstAttribute="top" secondItem="JRp-OS-zsL" secondAttribute="bottom" constant="20" id="Gt7-wJ-eLP"/>
+                            <constraint firstItem="JRp-OS-zsL" firstAttribute="leading" secondItem="wi4-bT-7Iw" secondAttribute="centerX" constant="10" id="KBe-kN-McJ"/>
+                            <constraint firstItem="PV4-e5-WVf" firstAttribute="leading" secondItem="wi4-bT-7Iw" secondAttribute="leading" id="QCY-sz-4o9"/>
+                            <constraint firstItem="805-ZT-KNh" firstAttribute="top" secondItem="PV4-e5-WVf" secondAttribute="bottom" constant="5" id="Si1-hy-NUk"/>
+                            <constraint firstItem="wi4-bT-7Iw" firstAttribute="trailing" secondItem="PV4-e5-WVf" secondAttribute="trailing" constant="20" id="Y0w-gH-frA"/>
+                            <constraint firstItem="wi4-bT-7Iw" firstAttribute="bottom" secondItem="X8K-8A-r41" secondAttribute="bottom" constant="60" id="krf-Gc-Gk2"/>
+                            <constraint firstItem="6ZH-bG-wmR" firstAttribute="top" secondItem="Mxe-Tw-I1S" secondAttribute="bottom" constant="12" id="q5I-BT-vEp"/>
+                            <constraint firstItem="6ZH-bG-wmR" firstAttribute="trailing" secondItem="wi4-bT-7Iw" secondAttribute="centerX" constant="-10" id="sBh-cG-LRR"/>
+                            <constraint firstItem="PV4-e5-WVf" firstAttribute="top" secondItem="wi4-bT-7Iw" secondAttribute="top" id="wXb-DN-dWY"/>
+                            <constraint firstItem="Mxe-Tw-I1S" firstAttribute="top" secondItem="PV4-e5-WVf" secondAttribute="bottom" constant="5" id="z84-sd-GMO"/>
+                            <constraint firstItem="JRp-OS-zsL" firstAttribute="top" secondItem="Mxe-Tw-I1S" secondAttribute="bottom" constant="12" id="ztg-sA-75R"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appLabel" destination="PV4-e5-WVf" id="9Vg-Qh-bdT"/>
+                        <outlet property="logText" destination="X8K-8A-r41" id="vIS-gH-nBL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="138"/>
+        </scene>
+    </scenes>
+</document>

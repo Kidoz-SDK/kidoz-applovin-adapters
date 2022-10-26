@@ -1,0 +1,6 @@
+framework module Pods_KidozAppLovinSampleApp {
+  umbrella header "Pods-KidozAppLovinSampleApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
