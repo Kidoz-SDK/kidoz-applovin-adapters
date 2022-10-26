@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		44B1820C3D765EEAD57DCAA0 /* Pods_KidozAppLovinSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D762F5E5A4B36032451270 /* Pods_KidozAppLovinSampleApp.framework */; };
 		DFB96384290918F40058DC91 /* Kidoz in Resources */ = {isa = PBXBuildFile; fileRef = DFB96383290918F40058DC91 /* Kidoz */; };
-		DFB96386290926220058DC91 /* libKidozSDK_AppLovinAdapter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB96385290926000058DC91 /* libKidozSDK_AppLovinAdapter.a */; };
 		DFB96388290928920058DC91 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = DFB96387290928920058DC91 /* Podfile */; };
+		DFB9638A290952420058DC91 /* libKidozSDK_AppLovinAdapter-v8.9.3_1.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB96389290951D60058DC91 /* libKidozSDK_AppLovinAdapter-v8.9.3_1.0.0.a */; };
 		DFF96DFC28BF5B43009B1E4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF96DFB28BF5B43009B1E4E /* AppDelegate.swift */; };
 		DFF96DFE28BF5B43009B1E4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF96DFD28BF5B43009B1E4E /* SceneDelegate.swift */; };
 		DFF96E0028BF5B43009B1E4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF96DFF28BF5B43009B1E4E /* ViewController.swift */; };
@@ -30,6 +30,7 @@
 		DFB96383290918F40058DC91 /* Kidoz */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Kidoz; sourceTree = "<group>"; };
 		DFB96385290926000058DC91 /* libKidozSDK_AppLovinAdapter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKidozSDK_AppLovinAdapter.a; path = KidozAppLovinSampleApp/Kidoz/libKidozSDK_AppLovinAdapter.a; sourceTree = "<group>"; };
 		DFB96387290928920058DC91 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		DFB96389290951D60058DC91 /* libKidozSDK_AppLovinAdapter-v8.9.3_1.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libKidozSDK_AppLovinAdapter-v8.9.3_1.0.0.a"; path = "KidozAppLovinSampleApp/Kidoz/libKidozSDK_AppLovinAdapter-v8.9.3_1.0.0.a"; sourceTree = "<group>"; };
 		DFF96DF828BF5B43009B1E4E /* KidozAppLovinSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidozAppLovinSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF96DFB28BF5B43009B1E4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFF96DFD28BF5B43009B1E4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,8 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFB96386290926220058DC91 /* libKidozSDK_AppLovinAdapter.a in Frameworks */,
 				44B1820C3D765EEAD57DCAA0 /* Pods_KidozAppLovinSampleApp.framework in Frameworks */,
+				DFB9638A290952420058DC91 /* libKidozSDK_AppLovinAdapter-v8.9.3_1.0.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +58,7 @@
 		284336137C81D3E18AC53E98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DFB96389290951D60058DC91 /* libKidozSDK_AppLovinAdapter-v8.9.3_1.0.0.a */,
 				DFB96385290926000058DC91 /* libKidozSDK_AppLovinAdapter.a */,
 				DF422D9028C741AB00E16C84 /* libKidozSDK_AppLovinAdapter_TestApp.a */,
 				DFF96E0F28BF5E0D009B1E4E /* libKidozSDK_AppLovinAdapter.a */,
