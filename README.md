@@ -9,7 +9,7 @@ on the following platforms:
 
 + [Unity](https://github.com/Kidoz-SDK/applovin-adapter-sample-apps/tree/main/Unity)
 + [Native Android](https://github.com/Kidoz-SDK/applovin-adapter-sample-apps/tree/main/Android)
-+ [Native iOS](https://github.com/Kidoz-SDK/applovin-adapter-sample-apps/tree/main/Unity)
++ [Native iOS](https://github.com/Kidoz-SDK/applovin-adapter-sample-apps/tree/main/iOS)
 
 Prerequisites
 =================================
